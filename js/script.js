@@ -5,14 +5,13 @@ const Button = document.querySelector(".btn")
 const ButtonSelect = document.querySelectorAll(".select")
 const Note = document.getElementById("note")
 
-Button.addEventListener("click", () =>{
-    Thanks.classList.remove("hidden")
-    Conteiner.classList.add("hidden")
-})
-
 ButtonSelect.forEach((ButtonSelect) =>{
     ButtonSelect.addEventListener("click", () =>{
         Note.innerHTML = ButtonSelect.innerHTML
+        Button.addEventListener("click", () =>{
+            Thanks.classList.remove("hidden")
+            Conteiner.classList.add("hidden")
+        })
     })
 })
 
